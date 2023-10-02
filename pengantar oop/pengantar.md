@@ -19,7 +19,7 @@ Object-oriented programming atau disingkat OOP merupakan paradigma pemrograman y
 * Method merupakan fungsi yang menggambarkan aksi yang dapat dilakukan oleh objek tersebut.
 
 Paradigma OOP kerap digambarkan dengan kehidupan dunia nyata. Objek di dalam OOP, bisa kita anggap seperti objek yang ada di dunia nyata.
-
+contoh nya
 Object 	Mobil.
 Properties	Merek,Warna, Kecepatan, maksimal, Nomor rangka
 Methods	Maju ,Mundur, Belok
