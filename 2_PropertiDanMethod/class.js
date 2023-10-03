@@ -15,18 +15,19 @@ console.log(asep)
 
 asep.pengendara()
 
+
 //mendefinisikan properti dari  kelas itu sendiri
 class motor{
     constructor(inisialkendaraan,  warna, kecepatan, platnomer){
         this.merekmotornya = inisialkendaraan;
         this.warnanya = warna;
         this.kecepatannya = kecepatan;
-        this.platnomernya = this.merekmotornya + " " + Math.floor(Math.random() * 1000 + 1)
+        // this.platnomernya = this.merekmotornya + " " + Math.floor(Math.random() * 1000 + 1)  SEBELUM MENGGUNAKAN  Properti Getter dan Setter
+        this._platnomernya = this.merekmotornya + " " + Math.floor(Math.random() * 1000 + 1) //SETELAH  MENGGUNAKAN  Properti Getter dan Setter
     }
 
 }
 
 const motor1 = new motor("dr", "hitam", 1200,420)
-// motor1.platnomernya = "2627"  akan mengubah nilai plat nya yang sudah ada
-
+motor1._platnomernya = "2627"  // akan mengubah nilai plat nya yang sudah ada
 console.log(motor1);

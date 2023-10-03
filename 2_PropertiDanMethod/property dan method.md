@@ -60,3 +60,15 @@ const panggil = new user("sabardi","baharudim");
 console.log(panggil)
 panggil.Fullname = "ilham mustafa"
 console.log(panggil.Fullname);
+
+Di dalam class User, Anda bisa melihat bahwa terdapat data property firstName dan lastName. Nilai dari properti tersebut ditetapkan via argumen constructor. Selain itu, Anda juga bisa melihat sebuah method get fullName dan set fullname. Method tersebut merupakan accessor property yang mengatur cara akses dari properti fullName.
+
+Sebab kita menetapkan getter dan setter untuk properti fullName, maka kita bisa mengakses properti tersebut melalui instance User. Ketika kita coba mendapatkan nilai properti fullName dengan cara user.fullName, method getter akan dijalankan dan nilai yang dikembalikan akan menjadi nilai dari properti tersebut. Begitu juga ketika kita coba menetapkan nilai properti fullName dengan cara user.fullName = “Fulan Fulanah”, kode di dalam method setter akan dijalankan.
+
+Catatan penting yang perlu Anda ketahui mengenai getter setter adalah:
+
+* method getter harus mengembalikan sebuah nilai dan nilai tersebut akan menjadi nilai properti;
+* method setter harus menerima satu argumen yang nilainya diambil dari operand ke dua ketika melakukan assignment operator.
+
+Bagaimana getter dan setter dapat memproteksi perubahan properti chassisNumber? Di JavaScript, pola yang sering diterapkan untuk memecahkan masalah ini adalah dengan memanfaatkan getter setter sebagai “wrapper” dari properti aslinya. Tujuannya agar getter setter bisa mengontrol akses seperti mendapatkan dan menetapkan nilai properti.
+Untuk menerapkan pola ini, pertama kita perlu mengubah nama dari properti platnomernya, misalnya dengan menambahkan tanda garis bawah di depannya menjadi _platnomernya.
