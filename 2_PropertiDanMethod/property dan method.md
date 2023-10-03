@@ -72,3 +72,8 @@ Catatan penting yang perlu Anda ketahui mengenai getter setter adalah:
 
 Bagaimana getter dan setter dapat memproteksi perubahan properti chassisNumber? Di JavaScript, pola yang sering diterapkan untuk memecahkan masalah ini adalah dengan memanfaatkan getter setter sebagai “wrapper” dari properti aslinya. Tujuannya agar getter setter bisa mengontrol akses seperti mendapatkan dan menetapkan nilai properti.
 Untuk menerapkan pola ini, pertama kita perlu mengubah nama dari properti platnomernya, misalnya dengan menambahkan tanda garis bawah di depannya menjadi _platnomernya.
+
+Catatan
+Sebenarnya nilai chassisNumber masih bisa berubah jika kita mengubah langsung melalui properti _chassisNumber. Namun, ketahuilah bahwa mengubah atau mendapatkan nilai properti objek yang diawali dengan tanda underscore tidak direkomendasikan. Alasanya, komunitas JavaScript menyepakati bahwa hal properti yang diberi tanda underscore bukan untuk diakses, alias bersifat privat.
+
+JavaScript versi ES2022 hadir dengan fitur private identifier. Dengan fitur tersebut, kita bisa membuat private property. Ini akan memecahkan masalah di atas. Private property akan kami bahas pada materi Member Visibility.
