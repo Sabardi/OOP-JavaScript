@@ -26,7 +26,7 @@ class Car {
    
   console.log(car1);
   console.log(car2);
-  console.log(car3);
+  console.log(car3); 
    
   car1.drive();
   car2.reverse();
@@ -59,5 +59,8 @@ hitunghasil.penjumlahan();
 //     }
 // }
 // namasaya = new Nama();
-// nama = ("sabardi")
+// nama = ("sabardi")Properti dan Method
 // nama.tampilnama();
+
+class Buah {}
+console.log(typeof buah)
