@@ -13,7 +13,6 @@ mailService.SebutNama("hallo om", "om firman")
 // super class
 class mail extends MailService{
 //     // overriding constructor
-
     constructor(sender, isBusiness){
         super(sender);
         console.log(this.isBusiness = isBusiness)
