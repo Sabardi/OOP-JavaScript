@@ -8,7 +8,7 @@ class MailService{
     }
 }
 const mailService = new MailService("sabardi")
-mailService.SebutNama("hallo om", "om firman")
+// mailService.SebutNama("hallo om", "om firman")
 
 // super class
 class mail extends MailService{
