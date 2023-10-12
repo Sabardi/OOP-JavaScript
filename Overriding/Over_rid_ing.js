@@ -4,10 +4,10 @@ class MailService{
         this.sender = sender
     }
     SebutNama(message , receiver){
-        console.log("from",this.Kirim, message, "to", receiver)
+        console.log("from",this.sender, message, "to", receiver)
     }
 }
-const mailService = new MailService("sabardi")
+// const mailService = new MailService("sabardi")
 // mailService.SebutNama("hallo om", "om firman")
 
 // super class
@@ -21,5 +21,12 @@ class mail extends MailService{
     }
 }
 
-const whatsapp = new  mail("+6281234567890", true)
-// console.log(whatsapp)
+const pesanmail = new MailService("Sabardi")
+pesanmail.SebutNama("gimana", "bambang")
+console.log(pesanmail)
+console.log("==============")
+
+console.log("==============")
+
+
+console.log("==============")
