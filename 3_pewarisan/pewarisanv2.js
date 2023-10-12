@@ -1,26 +1,40 @@
-class Mobil {
-    constructor(mereknya){
-        this.merek = mereknya;
+// Superclass
+class MailService {
+    constructor(sender) {
+      this.sender = sender;
     }
-    mengemudi(jenis){
-        console.log("saya mengemudi mobil bermerek ", this.merek, "jenis nya ", jenis)
+   
+    sendMessage(message, receiver) {
+      console.log(`${this.sender} sent ${message} to ${receiver}`);
     }
-}
+  }
+   
+  // Subclass
+  class WhatsAppService extends MailService {
+    sendBroadcastMessage(pesannya, receivers) { //pesan nya itu parameter dan reciver parameter juga
+        for (const penerimanya of receivers) {
+          this.sendMessage(pesannya, penerimanya);// this.sendMessage di warisi oleh induk nya
+        }
+      }
+  }
+   
+  // Subclass
+  class EmailService extends MailService {
+    sendDelayedMessage(message, receiver, delay) {
+        setTimeout(() => {
+          this.sendMessage(message, receiver);
+        }, delay);
+      }
+  }
 
-mobilsaya = new Mobil("honda")
-mobilsaya.mengemudi("honda juga")
+  //menampilkan data dari induk
 
+  const pesannya = new MailService("asep")
+  pesannya.sendMessage("hallo bos", "bambang")
+console.log("==============")
+  const pesanwaservice = new WhatsAppService("hahah")
+  pesanwaservice.sendBroadcastMessage("apa kabar", "burhan")
 
-class MobilPickUp extends Mobil{
-    constructor(merek,jenis){
-        super(merek)
-        this.MobilPickUp = jenis
-    }
-    sewamobil(){
-        console.log("halo mempunya merek", this.merek ,"dan jenis", this.MobilPickUp)
-    }
-}
-
-const mobilku = new MobilPickUp("susuki", "supra")
-mobilku.sewamobil()
-// // mobilku.sewa
+console.log("==============")
+const pesanemail = new EmailService("budi")
+pesanemail.sendDelayedMessage("sabarya","bud anduk",3000)
